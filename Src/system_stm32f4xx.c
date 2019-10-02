@@ -61,6 +61,7 @@
   * @{
   */
 
+
 #include "stm32f4xx.h"
 
 #if !defined  (HSE_VALUE) 
@@ -269,8 +270,8 @@ void SystemCoreClockUpdate(void)
 /**
   * @}
   */
-  
+
 /**
   * @}
-  */    
+  */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
