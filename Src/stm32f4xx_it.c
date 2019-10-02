@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    UART/UART_TwoBoards_ComPolling/Src/stm32f4xx_it.c 
+  * @file    GPIO/GPIO_IOToggle/Src/stm32f4xx_it.c 
   * @author  MCD Application Team
   * @brief   Main Interrupt Service Routines.
   *          This file provides template for all exceptions handler and 
@@ -38,12 +38,12 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32f4xx_it.h"
-   
+
 /** @addtogroup STM32F4xx_HAL_Examples
   * @{
   */
 
-/** @addtogroup UART_TwoBoards_ComPolling
+/** @addtogroup GPIO_IOToggle
   * @{
   */
 
@@ -59,7 +59,7 @@
 /******************************************************************************/
 
 /**
-  * @brief   This function handles NMI exception.
+  * @brief  This function handles NMI exception.
   * @param  None
   * @retval None
   */
@@ -162,15 +162,6 @@ void SysTick_Handler(void)
 /*  available peripheral interrupt handler's name please refer to the startup */
 /*  file (startup_stm32f4xx.s).                                               */
 /******************************************************************************/
-/**
-  * @brief  This function handles external line 0 interrupt request.
-  * @param  None
-  * @retval None
-  */
-void EXTI15_10_IRQHandler(void)
-{
-  HAL_GPIO_EXTI_IRQHandler(KEY_BUTTON_PIN);
-}
 
 /**
   * @brief  This function handles PPP interrupt request.
@@ -180,7 +171,6 @@ void EXTI15_10_IRQHandler(void)
 /*void PPP_IRQHandler(void)
 {
 }*/
-
 
 /**
   * @}

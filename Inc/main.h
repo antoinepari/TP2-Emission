@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    UART/UART_TwoBoards_ComPolling/Inc/main.h 
+  * @file    GPIO/GPIO_IOToggle/Inc/main.h 
   * @author  MCD Application Team
   * @brief   Header for main.c module
   ******************************************************************************
@@ -40,52 +40,10 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
 #include "stm32f4xx_nucleo.h"
-#include "stdio.h"
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
-/* User can use this section to tailor USARTx/UARTx instance used and associated 
-   resources */
-/* Definition for USARTx clock resources */
-#define USARTx                           USART1
-#define USARTx_CLK_ENABLE()              __HAL_RCC_USART1_CLK_ENABLE()
-#define USARTx_RX_GPIO_CLK_ENABLE()      __HAL_RCC_GPIOA_CLK_ENABLE()
-#define USARTx_TX_GPIO_CLK_ENABLE()      __HAL_RCC_GPIOA_CLK_ENABLE()
-
-#define USARTx_FORCE_RESET()             __HAL_RCC_USART1_FORCE_RESET()
-#define USARTx_RELEASE_RESET()           __HAL_RCC_USART1_RELEASE_RESET()
-
-/* Definition for USARTx Pins */
-#define USARTx_TX_PIN                    GPIO_PIN_9
-#define USARTx_TX_GPIO_PORT              GPIOA
-#define USARTx_TX_AF                     GPIO_AF7_USART1
-#define USARTx_RX_PIN                    GPIO_PIN_10
-#define USARTx_RX_GPIO_PORT              GPIOA
-#define USARTx_RX_AF                     GPIO_AF7_USART1
-
-/* Private defines -----------------------------------------------------------*/
-#define B1_Pin GPIO_PIN_13
-#define B1_GPIO_Port GPIOC
-#define USART_TX_Pin GPIO_PIN_2
-#define USART_TX_GPIO_Port GPIOA
-#define USART_RX_Pin GPIO_PIN_3
-#define USART_RX_GPIO_Port GPIOA
-#define LD2_Pin GPIO_PIN_5
-#define LD2_GPIO_Port GPIOA
-#define TMS_Pin GPIO_PIN_13
-#define TMS_GPIO_Port GPIOA
-#define TCK_Pin GPIO_PIN_14
-#define TCK_GPIO_Port GPIOA
-#define SWO_Pin GPIO_PIN_3
-#define SWO_GPIO_Port GPIOB
-
-/* Size of Trasmission buffer */
-#define TXBUFFERSIZE                      (COUNTOF(aTxBuffer) - 1)
-/* Size of Reception buffer */
-#define RXBUFFERSIZE                      TXBUFFERSIZE
-  
 /* Exported macro ------------------------------------------------------------*/
-#define COUNTOF(__BUFFER__)   (sizeof(__BUFFER__) / sizeof(*(__BUFFER__)))
 /* Exported functions ------------------------------------------------------- */
 
 #endif /* __MAIN_H */
